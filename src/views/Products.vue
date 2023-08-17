@@ -3,8 +3,10 @@
 
     <template #title> Приветствую в каталоге магазина </template>
 
-    <template #content class="product-card">
-      <product/>
+    <template #content >
+      <div class="product-card">
+        <product/>
+      </div>
     </template>
 
     <template #footer>
@@ -25,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-.product-card{
+  .product-card{
 
   display: flex;
   flex-direction: row;
