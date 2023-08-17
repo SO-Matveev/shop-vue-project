@@ -1,6 +1,17 @@
 <template>
-    <div>Приветствую в каталоге магазина</div>
-    <product/>
+  <Card>
+
+    <template #title> Приветствую в каталоге магазина </template>
+
+    <template #content class="product-card">
+      <product/>
+    </template>
+
+    <template #footer>
+      <Paginator :rows="10" :totalRecords="120" :rowsPerPageOptions="[10, 20, 30]"></Paginator>
+    </template>
+
+  </Card>
 </template>
 
 <script>
@@ -13,6 +24,12 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
+.product-card{
 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
 </style>

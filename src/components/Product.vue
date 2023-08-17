@@ -1,4 +1,4 @@
-<template>
+<template >
     <Card style="width: 25em" class="product" v-for="product in products" :key="product.id">
     <template #header>
         <img alt="user header" src="/images/usercard.png" />
@@ -33,5 +33,10 @@
 
 
 <style scoped>
-
+.product{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 </style>

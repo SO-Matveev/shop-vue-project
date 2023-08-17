@@ -1,35 +1,20 @@
 <template>
-    <div class="card">
-    <TabMenu :model="items" />
-      <router-view />
-  </div>
+  <system-nav-bar/>
+  <logo-nav-bar/>
+  <router-view/>
 </template>
 
-<script setup>
-import { ref } from "vue";
+<script>
+import SystemNavBar from "@/components/SystemNavBar.vue";
+import LogoNavBar from "@/components/LogoNavBar.vue";
 
-const items = ref([
-  {
-      label: 'Домой',
-      icon: 'pi pi-home',
-      to: '/'
-  },
-  {
-      label: 'Каталог',
-      icon: 'pi pi-table',
-      to: '/products'
-  },
-  {
-      label: 'О Магазине',
-      icon: 'pi pi-info-circle',
-      to: '/about'
-  },
-  {
-      label: 'Корзина',
-      icon: 'pi pi-trash',
-      to: '/trash'
-  },
-]);
+import {defineComponent} from "vue";
+
+export default defineComponent({
+  components: {LogoNavBar, SystemNavBar}
+})
+
+
 </script>
 <style>
 
