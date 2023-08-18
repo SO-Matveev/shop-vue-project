@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/Contacts.vue'
 import Products from '../views/Products.vue'
 import Trash from '../views/Trash.vue'
-import Contacts from "@/views/Contacts.vue";
+import Admin from "@/views/Admin.vue";
 
 const routes = [
   {
@@ -15,9 +14,9 @@ const routes = [
     component: Products
   },
   {
-    path: '/contacts',
-    name: 'contacts',
-    component: Contacts
+    path: '/admin',
+    name: 'admin',
+    component: Admin
   },
   {
     path: '/trash',

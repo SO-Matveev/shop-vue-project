@@ -1,12 +1,20 @@
 <template>
   <div class="card relative z-2">
-    <Menubar :model="items"/>
+    <Menubar :model="items" class="transparent">
+      <template #end>
+        <Button  icon="pi pi-user" severity="info" rounded outlined aria-label="User" @click="goToAminPage"/>
+      </template>
+    </Menubar>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import router from "@/router";
 
+const goToAminPage = () => {
+  router.push({ path: 'admin' });
+}
 const items = ref([
   {
     label: 'Домой',
@@ -15,18 +23,20 @@ const items = ref([
 
   },
   {
-    label: 'Контакты',
-    icon: 'pi pi-book',
-    to: 'Contacts'
-  },
-  {
     label: 'О Магазине',
     icon: 'pi pi-info-circle',
     to: '/about'
 
   },
 ]);
-</script>
-<style>
 
+
+</script>
+<style scoped>
+  .transparent{
+    background: none;
+    color: transparent;
+    border: none;
+    border-radius: 0px;
+  }
 </style>

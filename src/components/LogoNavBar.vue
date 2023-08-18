@@ -1,6 +1,6 @@
 <template>
   <div class="card relative z-2">
-    <Menubar :model="items">
+    <Menubar :model="items" class="transparent">
       <template #start>
         <img alt="logo" src="https://primefaces.org/cdn/primevue/images/logo.svg" height="40" class="mr-2" />
       </template>
@@ -22,3 +22,11 @@ const items = ref([
   }
 ]);
 </script>
+<style scoped>
+.transparent{
+  background: none;
+  color: transparent;
+  border: none;
+  border-radius: 0px;
+}
+</style>
