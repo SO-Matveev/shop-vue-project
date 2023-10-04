@@ -1,6 +1,6 @@
 <template>
   <div class="grid -mt-3 -ml-3 -mr-3">
-    <div class="col-12 md:col-6 lg:col-4 product" v-for="product in products" :key="product.id">
+    <div class="col-12 md:col-6 lg:col-4 product" v-for="product in products">
       <div class="p-2">
         <div class="shadow-2 p-4 surface-card border-round">
           <div class="relative mb-3">
@@ -33,21 +33,16 @@
   </div>
 </template>
 <script >
-    export default{
-        data: () => {
-            return {
-                products: [
-                    {id: 1, name: 'Ботинки', price: '82$', description: 'Крутые ботинки', section: 'Ботинки', src:'https://img.alicdn.com/imgextra/i2/887702101/TB2CcfXeVXXXXXcXpXXXXXXXXXX_!!887702101.jpg'},
-                    {id: 2, name: 'Шуба', price: '82$', description: 'Шуба-дуба', section: 'Верхняя одежда', src:'https://uhd.name/uploads/posts/2022-09/1662232601_10-uhd-name-p-mariya-furs-vkontakte-17.jpg'},
-                    {id: 3, name: 'Шапка', price: '82$', description: 'Шапка ушанка', section: 'Акссесуары', src:'https://ae04.alicdn.com/kf/HTB1hONoKqmWBuNjy1Xaq6xCbXXaM.jpg'},
-                    {id: 4, name: 'Штаны', price: '82$', description: 'Штаны теплые', section: 'Верхняя одежда', src:'https://www.sportkult.ru/ipreview/goods/820/820/Noname_Winter_Pants.jpg'}
-                ]
-            }
+    export default {
+      props: {
+        products: {
+          type: Array,
+          required: true
         }
+      }
     }
 
 </script>
-
 
 <style scoped>
 .product{
