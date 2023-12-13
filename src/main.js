@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import PrimeVue from 'primevue/config';
+import store from "@/store";
 
 import 'primevue/resources/themes/lara-light-indigo/theme.css'
 import 'primeflex/primeflex.css';
@@ -21,6 +22,7 @@ import Dropdown from 'primevue/dropdown';
 const app = createApp(App)
 app.use(router)
 app.use(PrimeVue)
+app.use(store)
 
 app.component('Menubar', Menubar)
 app.component('Card', Card)
